@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-helloworld",
+  "version": "0.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/amirrajan/nodejs-helloworld.git"
+  },
+  "dependencies": {
+    "express": "x",
+    "underscore": "x",
+    "ejs": "x",
+    "jasmine-node": "x",
+    "bower": "x"
+  },
+  "subdomain": "nodejs-helloworld",
+  "engines": {
+    "node": "0.10.x"
+  }
+}
