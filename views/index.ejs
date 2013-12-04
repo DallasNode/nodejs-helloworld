@@ -3,16 +3,20 @@
 <html>
   <head>
     <title>hello world</title>
-    <script src="/public/angular/angular.js"></script>
     <script src="/public/jquery/jquery.js"></script>
     <script src="/public/underscore/underscore.js"></script>
   </head>
-  <body>
-    Hello World.
+  <body ng-app="App" ng-controller="AppCtrl">
+    {{ message }}
     <script>
-       $(function() { 
-           alert('hello');
+      $(function() { 
+        var app = angular.module("App", []);
+        app.controller("AppCtrl", function($scope) {
+          $scope.message = "hello";
         });
+      });
     </script>
+
+    <script src="/public/angular/angular.js"></script>
   </body>
 </html>
