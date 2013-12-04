@@ -7,12 +7,25 @@
     <script src="/public/underscore/underscore.js"></script>
   </head>
   <body ng-app="App" ng-controller="AppCtrl">
-    {{ message }}
+    <input type="text" ng-model="firstName" />
+    <input type="text" ng-model="lastName" />
+    <input type="button" ng-click="create()" value="insert" />
+    <div ng-repeat="person in people">
+      {{ person.firstName }} {{ person.lastName }}
+    </div>
     <script>
       $(function() { 
         var app = angular.module("App", []);
         app.controller("AppCtrl", function($scope) {
-          $scope.message = "hello";
+          $scope.firstName = "";
+          $scope.lastName = "";
+          $scope.people = [];
+          $scope.people.push({ firstName: "Amir", lastName: "Rajan" });
+          $scope.create = function() {
+            $scope.people.push({ firstName: $scope.firstName, lastName: $scope.lastName });
+            $scope.firstName = "";
+            $scope.lastName = "";
+          }
         });
       });
     </script>
