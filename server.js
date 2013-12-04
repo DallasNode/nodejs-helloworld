@@ -17,7 +17,7 @@ app.use(express.session({ secret: 'sooo secret' }));
 app.use(app.router);
 
 app.get('/', function (req, res) {
-  res.render('index');
+  res.render('index', { message: "hi" });
 });
 
 server.listen(process.env.PORT || config.port);
